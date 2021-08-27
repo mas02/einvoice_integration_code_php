@@ -1,0 +1,8 @@
+1:-einvoice.php file is main script. Before execute the script you need to follw below point.
+
+i) You need to put GSTIN info(gstin,einvUsername,einvPassword) in einvGstinInfo  in libs/constant.php file.
+ii) You need to put credential details(username,password,client_id,client_secret) provide by masters india in accessTokenInfo  in libs/constant.php file.
+iii) You need to uncomment the function in einvoice.php file which you want to execute.
+iv) host variable in libs/constant.php for sandbox will be "https://api.mastersindia.co". For production, it will be "https://proapi.mastersindia.co".
+v) NIC encryption public key(Einv_publickey.pem) file is different for both environment sandbox and production.
+vii) At the time of generate, cancel and get IRN you need to pass einv_auth_token, einv_sek which is received in einvoice auth token API and einv_app_key which is used in einvocie auth token API.
